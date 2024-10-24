@@ -2,14 +2,18 @@ package com.example.ivk_sp_boot.dao;
 
 
 import com.example.ivk_sp_boot.model.User;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
 
+    @Autowired
     private EntityManager em;
 
     @PersistenceContext

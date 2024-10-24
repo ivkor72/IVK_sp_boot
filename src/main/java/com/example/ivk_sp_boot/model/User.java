@@ -3,10 +3,15 @@ package com.example.ivk_sp_boot.model;
 
 
 
-import jakarta.persistence.*;
+
+
+import org.springframework.data.annotation.Id;
 import org.springframework.transaction.annotation.Transactional;
-
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 @Transactional
 @Entity
