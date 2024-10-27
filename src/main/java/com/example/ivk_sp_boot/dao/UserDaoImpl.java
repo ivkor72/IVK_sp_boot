@@ -1,11 +1,8 @@
 package com.example.ivk_sp_boot.dao;
 
-
 import com.example.ivk_sp_boot.model.User;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
@@ -27,26 +24,26 @@ public class UserDaoImpl implements UserDao {
         return   em.createQuery("from User", User.class).getResultList();
     }
 
-//    @Override
-//    public void saveUser(User user) {
-//       if (user.getId() == 0) {
-//            em.persist(user);
-//        } else {
-//            em.merge(user);
-//        }
-//        em.flush();
-//    }
-//
-//    @Override
-//    public User getUser(int id) {
-//        User user = em.find(User.class, id);
-//        return user;
-//    }
-//
-//    @Override
-//    public void deleteUser(int id) {
-//        User user = em.find(User.class, id);
-//        em.remove(user);
-//        em.flush();
-//    }
+    @Override
+    public void saveUser(User user) {
+       if (user.getId() == 0) {
+            em.persist(user);
+        } else {
+            em.merge(user);
+        }
+        em.flush();
+    }
+
+    @Override
+    public User getUser(int id) {
+        User user = em.find(User.class, id);
+        return user;
+    }
+
+    @Override
+    public void deleteUser(int id) {
+        User user = em.find(User.class, id);
+        em.remove(user);
+        em.flush();
+    }
 }

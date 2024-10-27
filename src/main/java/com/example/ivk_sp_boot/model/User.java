@@ -1,11 +1,6 @@
 package com.example.ivk_sp_boot.model;
 
-
-
-
-
-
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.Column;
 import javax.persistence.Entity;
